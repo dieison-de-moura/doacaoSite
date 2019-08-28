@@ -15,3 +15,4 @@
 //     return view('home');
 // });
 Route::get('/', ['as' => 'site.home', 'uses' => 'HomeController@index']);
+Route::get('/layout', ['as' => 'site.cadastrohospital', 'uses' => 'CadastroHospitalController@index']);
