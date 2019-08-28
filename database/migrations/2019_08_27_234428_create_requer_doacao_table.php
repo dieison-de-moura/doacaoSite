@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateRequerDoacaoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('requer_doacao', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->integer('id_hospital');
+            $table->string('tipo_sangue');
+            $table->longText('descricao');
+            $table->string('hora_doacao');
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('requer_doacao');
     }
 }
