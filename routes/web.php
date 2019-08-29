@@ -15,4 +15,7 @@
 //     return view('home');
 // });
 Route::get('/', ['as' => 'site.home', 'uses' => 'HomeController@index']);
-Route::get('/layout', ['as' => 'site.cadastrohospital', 'uses' => 'CadastroHospitalController@index']);
+
+//rotas para cadastro de hospital
+Route::get('/cadastro', ['as' => 'site.cadastrohospital', 'uses' => 'CadastroHospitalController@index']);
+Route::post('/cadastro/cadastroHospital', ['as' => 'site.cadastrohospital.salvar', 'uses' => 'CadastroHospitalController@cadastrar']);

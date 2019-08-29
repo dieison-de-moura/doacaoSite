@@ -20,7 +20,7 @@ class CreateHospitalTable extends Migration
             $table->integer('numero');
             $table->string('bairro');
             $table->string('cidade');
-            $table->enum('estado', ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']);
+            $table->string('estado');
             $table->string('complento');
             $table->longText('horario_atendimento');
             $table->timestamps();

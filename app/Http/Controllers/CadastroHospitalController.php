@@ -8,6 +8,11 @@ class CadastroHospitalController extends Controller
 {
     public function index()
     {
-        return view('layout.cadastroHospital');
+        return view('cadastro.cadastroHospital');
+    }
+
+    public function cadastrar(Request $req)
+    {
+        dd($req);
     }
 }
