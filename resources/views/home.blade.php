@@ -3,9 +3,8 @@
 @section('titulo','Home')
 
 @section('conteudo')
-    <br><br>
-    <div class="container">
-        <h3 class="text-center">Ultimas postagens</h3>
+    <div class="container main-content">
+        <h3 class="text-center post-title">Ultimas postagens</h3>
         <br><br>
         {{-- @foreach($cursos as $curso) --}}
         <div class="row">

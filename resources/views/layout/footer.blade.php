@@ -1,18 +1,34 @@
-    <footer class="fixed-bottom">
-        {{-- <div class="container"> --}}
-        <div class="card">
-            <div class="card-header">
-                Citação
-            </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <footer class="blockquote-footer">Alguém famoso em <cite title="Título da fonte">Título da fonte</cite></footer>
-                </blockquote>
+    <footer class="">
+        <div class="container-fluid border border-dark shadow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="https://via.placeholder.com/150/150" alt="">
+                        <ul>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">teste</div>
+                    <div class="col-md-2">teste</div>
+                    <div class="col-md-2">teste</div>
+                    <div class="col-md-4">teste</div>
+                </div>
             </div>
         </div>
-        {{-- </div> --}}
     </footer>
+    <style>
+    html, body{
+    height: 100vh;
+    }
+
+    .main-content{
+        margin-top: 30px;
+        min-height: 100%;
+    }
+    </style>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,3 +36,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
