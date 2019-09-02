@@ -5,6 +5,9 @@
 @section('conteudo')
     <div class="container main-content">
         <h3 class="text-center post-title marg-top">Lista de Hospitais</h3>
+        @if(\Session::has('message'))
+        <p class="alert {{ \Session::get('alert-class', 'alert-success') }}">{{ \Session::get('message') }}</p>
+        @endif
         <table class="table table-hover marg-top">
             <thead>
               <tr>
@@ -30,7 +33,7 @@
           </table>
           <div class="row col-md-2">
             {{-- <p id="demo"></p> --}}
-            <a class="btn btn-outline-dark" href="{{ route('admin.hospital.adicionar') }}" role="button">Adicionar</a>
+            <a class="btn btn-outline-success" href="{{ route('admin.hospital.adicionar') }}" role="button">Adicionar</a>
           </div>
     </div>
     <script>
@@ -46,5 +49,12 @@
                 }
                 // document.getElementById("demo").innerHTML=x;
             }
+
+            $('.salvar_formulario').on('click', function(){
+                var nome_cliente = $('.nome_cliente').val();
+                $('#nome_cliente').val(nome_cliente);
+                $('.close').click();
+                $('#cadastro_cliente').submit();
+            });
         </script>
 @endsection

@@ -12,7 +12,7 @@
 
         <div class="form-group row">
             <div class="col-sm-10">
-            <button type="submit" class="btn btn-outline-primary">Atualizar</button>
+            <button type="submit" class="btn btn-outline-success">Atualizar</button>
             <a class="btn btn-outline-dark" href="{{ url()->previous() }}" role="button">Voltar</a>
             </div>
         </div>

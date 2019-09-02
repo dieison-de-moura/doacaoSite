@@ -23,8 +23,7 @@ class HospitalController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
-        // dd($dados);
-
+        \Session::flash('message', 'Cadastro realizado com sucesso!');
         Hospital::create($dados);
         return redirect()->route('admin.hospital');
     }
@@ -39,8 +38,7 @@ class HospitalController extends Controller
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
-        // dd($dados);
-
+        \Session::flash('message', 'Cadastro atualizado com sucesso!');
         Hospital::find($id)->update($dados);
         return redirect()->route('admin.hospital');
     }
