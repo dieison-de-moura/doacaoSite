@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHospitalTable extends Migration
+class CreateHospitalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateHospitalTable extends Migration
      */
     public function up()
     {
-        Schema::create('hospital', function (Blueprint $table) {
+        Schema::create('hospitals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
+            $table->string('email');
             $table->string('rua');
             $table->integer('numero');
             $table->string('bairro');
@@ -29,11 +30,11 @@ class CreateHospitalTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
+     *php artisan migrate:refresh
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('hospital');
+        Schema::dropIfExists('hospitals');
     }
 }

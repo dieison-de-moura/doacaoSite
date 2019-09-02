@@ -12,17 +12,19 @@
   </head>
   <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                <a class="navbar-brand" href="#">
-                    {{-- <img src="img/logodoacao.jpg" width="30" height="30" class="d-inline-block align-top" alt="Doe sangue, doe vida"> --}}
-                    <img src="{{ URL::asset('img/logodoacaotrp.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="Doe sangue, doe vida">
+                <a class="navbar-brand" href="{{ route('site.home') }}">
+                    <img src="{{ URL::asset('img/logodoacaotrp.jpg') }}" width="40" height="40" class="d-inline-block align-top img-thumbnail" alt="Doe sangue, doe vida">
                 </a>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="{{ route('site.home') }}">Página Inicial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('site.cadastrohospital') }}">Cadastrar Hospital</a>
+                        <a class="nav-link" href="{{ route('admin.hospital') }}">Cadastrar Hospital</a>
                     </li>
                     {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
