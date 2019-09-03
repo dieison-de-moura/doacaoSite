@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-md-2">
                         <ul style="list-style-type: none;">
-                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="{{ route('admin.termos.uso') }}">Termos de uso</a></li>
                             <li>teste</li>
                             <li>teste</li>
                             <li>teste</li>

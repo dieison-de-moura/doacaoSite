@@ -11,9 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
 Route::get('/', ['as' => 'site.home', 'uses' => 'HomeController@index']);
 
 //rotas para cadastro de hospital
@@ -27,3 +24,9 @@ Route::post('/admin/hospital/salvar', ['as' => 'admin.hospital.salvar', 'uses' =
 Route::get('/admin/hospital/editar/{id}', ['as' => 'admin.hospital.editar', 'uses' => 'Admin\HospitalController@editar']); //editar hospitais
 Route::put('/admin/hospital/atualizar/{id}', ['as' => 'admin.hospital.atualizar', 'uses' => 'Admin\HospitalController@atualizar']); //atualizar hospitais
 Route::get('/admin/hospital/deletar/{id}', ['as' => 'admin.hospital.deletar', 'uses' => 'Admin\HospitalController@deletar']); //editar hospitais
+
+Route::get('/admin/termos', ['as' => 'admin.termos.uso', 'uses' => 'Admin\HospitalController@termos']); //lista os hospitais
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('cpf');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('termos_de_uso');
+            $table->string('termos_de_uso');
             $table->rememberToken();
             $table->timestamps();
         });
