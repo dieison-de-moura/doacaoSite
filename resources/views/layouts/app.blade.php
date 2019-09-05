@@ -23,6 +23,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow">
             <div class="container">
+                <a class="navbar-brand" href="{{ route('site.home') }}">
+                    <img src="{{ URL::asset('img/logodoacaotrp.jpg') }}" width="40" height="40" class="d-inline-block align-top img-thumbnail" alt="Doe sangue, doe vida">
+                </a>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -76,5 +79,40 @@
             @yield('content')
         </main>
     </div>
-</body>
-</html>
+    <footer class="">
+            <div class="container-fluid border border-dark bg-dark shadow">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul style="list-style-type: none;">
+                                <li><a href="{{ route('admin.termos.uso') }}">Termos de uso</a></li>
+                                <li>teste</li>
+                                <li>teste</li>
+                                <li>teste</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4" style="margin-top: 45px;">© 2019 Moura Todos os direitos reservados.</div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 align-middle"><img src="{{ URL::asset('img/logofooter.jpg') }}" width="100" height="100" alt="" class="img-thumbnail" style="margin-top: 8px;"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <style>
+        html, body{
+        height: 80vh;
+        }
+
+        .main-content{
+            margin-top: 30px;
+            min-height: 100%;
+        }
+
+        .marg-top{
+            margin-top: 30px;
+        }
+        </style>
+          </body>
+          </html>
+

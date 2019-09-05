@@ -21,16 +21,17 @@
                 <img src="{{ URL::asset('img/logodoacaotrp.jpg') }}" width="40" height="40" class="d-inline-block align-top img-thumbnail" alt="Doe sangue, doe vida">
             </a>
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('site.home') }}">Página Inicial</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.hospital') }}">Cadastrar Hospital</a>
                 </li>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.doacao') }}">Cadastrar doação</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
 
                 </ul>
 
@@ -43,7 +44,7 @@
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                             </li>
                         @endif
                     @else

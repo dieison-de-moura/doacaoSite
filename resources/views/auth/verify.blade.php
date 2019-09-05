@@ -1,7 +1,8 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
+{{-- @extends('layouts.app') --}}
+@extends('layout.site')
+@section('titulo','Login')
+@section('conteudo')
+<div class="container main-content">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

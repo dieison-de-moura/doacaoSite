@@ -2,12 +2,12 @@
         <div class="container-fluid border border-dark bg-dark shadow">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-2" style="margin-top: 30px;">
                         <ul style="list-style-type: none;">
+                            <li></li>
                             <li><a href="{{ route('admin.termos.uso') }}">Termos de uso</a></li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
+                            <li><a href="{{ route('admin.termos.uso') }}">Sobre o site</a></li>
+                            <li></li>
                         </ul>
                     </div>
                     <div class="col-md-2"></div>

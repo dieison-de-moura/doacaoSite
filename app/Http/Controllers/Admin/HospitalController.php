@@ -8,6 +8,11 @@ use App\Models\Hospital; //colocando a model para poder utilizar metodos para bu
 
 class HospitalController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $registros = Hospital::all(); //utilizo isso para trazer todos os registros da base
@@ -51,6 +56,6 @@ class HospitalController extends Controller
 
     public function termos()
     {
-        return redirect()->route('admin.termos');
+        return view('admin.termos');
     }
 }

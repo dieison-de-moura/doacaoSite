@@ -25,6 +25,16 @@ Route::get('/admin/hospital/editar/{id}', ['as' => 'admin.hospital.editar', 'use
 Route::put('/admin/hospital/atualizar/{id}', ['as' => 'admin.hospital.atualizar', 'uses' => 'Admin\HospitalController@atualizar']); //atualizar hospitais
 Route::get('/admin/hospital/deletar/{id}', ['as' => 'admin.hospital.deletar', 'uses' => 'Admin\HospitalController@deletar']); //editar hospitais
 
+//rotas para cadastrar doacao
+Route::get('/admin/doacao', ['as' => 'admin.doacao', 'uses' => 'Admin\requerDoacaoController@index']); //lista os hospitais
+Route::get('/admin/doacao/adicionar', ['as' => 'admin.doacao.adicionar', 'uses' => 'Admin\requerDoacaoController@adicionar']); //adiciona hospitais
+Route::post('/admin/doacao/salvar', ['as' => 'admin.doacao.salvar', 'uses' => 'Admin\requerDoacaoController@salvar']); //salvar cadastro
+Route::get('/admin/doacao/editar/{id}', ['as' => 'admin.doacao.editar', 'uses' => 'Admin\requerDoacaoController@editar']); //editar hospitais
+Route::put('/admin/doacao/atualizar/{id}', ['as' => 'admin.doacao.atualizar', 'uses' => 'Admin\requerDoacaoController@atualizar']); //atualizar hospitais
+Route::get('/admin/doacao/deletar/{id}', ['as' => 'admin.doacao.deletar', 'uses' => 'Admin\requerDoacaoController@deletar']); //editar hospitais
+
+
+
 Route::get('/admin/termos', ['as' => 'admin.termos.uso', 'uses' => 'Admin\HospitalController@termos']); //lista os hospitais
 
 Auth::routes();
