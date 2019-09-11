@@ -4,7 +4,10 @@
 
 @section('conteudo')
 <div class="container main-content">
-    <h1>PENSAR O QUE ESCREVER AQUI</h1>
+    <h3 class="text-center post-title marg-top">Termos de uso do site</h3>
+    <ul>
+        <li>Você é responsável pelos dados informados no site.</li>
+    </ul>
 </div>
 
 @endsection

@@ -46,9 +46,12 @@ class HomeController extends Controller
      */
     public function detalhe($id)
     {
+        //retorna 404 caso não acha registros
+        // $registrosDoacao = requerDoacao::findOrFail($id);
+        // $registrosHospital = Hospital::findOrFail($registrosDoacao['hospital']);
         $registrosDoacao = requerDoacao::find($id);
         $registrosHospital = Hospital::find($registrosDoacao['hospital']);
         // dd($registrosDoacao, $registrosHospital);
-        return view('admin.detalhe', compact('registrosHospital', 'registrosDoacao'));
+        return view('admin.detalhe', compact('registrosDoacao', 'registrosHospital'));
     }
 }

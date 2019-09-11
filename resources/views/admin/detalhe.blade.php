@@ -14,16 +14,19 @@
               </tr>
             </thead>
             @if (isset($registrosDoacao) && !empty($registrosDoacao))
-            @foreach ($registrosDoacao as $regDoacao)
+            {{-- @foreach ($registrosDoacao as $regDoacao) --}}
+            {{-- <pre>
+            @php(var_dump($registrosDoacao))
+            @php(die) --}}
             {{-- {{ var_dump($registrosDoacao) }} --}}
             <tbody>
               <tr>
-                {{-- <td>{{ $regDoacao->titulo }}</td>
-                <td>{{ $regDoacao->tipo_sangue }}</td>
-                <td>{{ $regDoacao->descricao }}</td> --}}
+                <td>{{ $registrosDoacao->titulo }}</td>
+                <td>{{ $registrosDoacao->tipo_sangue }}</td>
+                <td>{{ $registrosDoacao->descricao }}</td>
               </tr>
             </tbody>
-            @endforeach
+            {{-- @endforeach --}}
             @endif
           </table>
     </div>
