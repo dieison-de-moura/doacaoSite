@@ -30,10 +30,10 @@ class requerDoacaoController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
-        if (!isset($req['ativo'])) {
-            $req['ativo'] = "0";
+        if (!isset($dados['ativo'])) {
+            $dados['ativo'] = "0";
         }
-        // dd($req);
+        // dd($dados);
         \Session::flash('message', 'Cadastro realizado com sucesso!');
         requerDoacao::create($dados);
         // dd($teste);

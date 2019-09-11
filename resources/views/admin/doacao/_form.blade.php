@@ -27,7 +27,7 @@
             @if (isset($registros) && !empty($registros))
             <option value=""> :: Selecione ::</option>
                 @foreach ($registros as $reg)
-            <option value="{{ isset($reg->hospital) ? $reg->hospital : '' }}">{{ isset($hosp->nome) ? $hosp->nome : '' }}</option>
+            <option value="{{ isset($reg->id) ? $reg->id : '' }}">{{ isset($reg->nome) ? $reg->nome : '' }}</option>
                 @endforeach
                 @else
                 <option value="{{ isset($registro->hospital) ? $registro->hospital : '' }}">{{ isset($registroHospital->nome) ? $registroHospital->nome : '' }}</option>
@@ -41,7 +41,7 @@
             Solicitação está ativa?
         </label>
         <div class="col-sm-10">
-            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1" value="{{ isset($registro->ativo) ? $registro->ativo : '' }}">
+            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1">
         </div>
     </div>
 
