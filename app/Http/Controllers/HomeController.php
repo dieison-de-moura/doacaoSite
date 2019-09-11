@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $registrosDoacao = requerDoacao::all();
+        $registrosDoacao = requerDoacao::all()->where('ativo', '=', 'on');
         $registrosHospital = Hospital::all();
         return view('home', compact('registrosHospital', 'registrosDoacao'));
     }
