@@ -11,9 +11,9 @@
         <table class="table table-hover marg-top">
             <thead>
               <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Atendimento</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Tipo Sangue</th>
+                <th scope="col">Ativa</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
@@ -21,9 +21,9 @@
             @foreach ($registros as $registro)
             <tbody>
               <tr>
-                <td>{{ $registro->nome }}</td>
-                <td>{{ $registro->cidade }}</td>
-                <td>{{ $registro->horario_atendimento }}</td>
+                <td>{{ $registro->titulo }}</td>
+                <td>{{ $registro->tipo_sangue }}</td>
+                <td>{{ $registro->ativo }}</td>
                 <td class="align-top">
                     <a class="btn btn-outline-primary" href="{{ route('admin.doacao.editar', $registro->id) }}" role="button">Editar</a>
                     <input class="btn btn-outline-danger" type="button" onclick="confirmarDelete()" value="Deletar" />

@@ -6,7 +6,7 @@
                         <ul style="list-style-type: none;">
                             <li></li>
                             <li><a href="{{ route('admin.termos.uso') }}">Termos de uso</a></li>
-                            <li><a href="{{ route('admin.termos.uso') }}">Sobre o site</a></li>
+                            <li><a href="{{ route('admin.sobre.empresa') }}">Sobre o site</a></li>
                             <li></li>
                         </ul>
                     </div>

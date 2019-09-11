@@ -4,24 +4,24 @@
 
 @section('conteudo')
     <div class="container main-content">
-        <h3 class="text-center post-title">Ultimas postagens</h3>
-        <br><br>
-        @if (isset($registros) && !empty($registros))
-        @foreach($registros as $registro)
-        <div class="row">
-            <div class="col-sm-6">
+        <h3 class="text-center post-title marg-top">Ultimas postagens</h3>
+        <div class="row marg-top">
+        @if (isset($registrosDoacao) && !empty($registrosDoacao))
+        @foreach($registrosDoacao as $doacao)
+            <div class="col-md-6">
                 <div class="card">
+                    <div class="card-header text-white bg-dark">Tipo do sangue: {{ $doacao->tipo_sangue }}
+                    </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ $registro->nome }}</h5>
-                    <p class="card-text">{{ $registro->horario_atendimento }}</p>
-                    <a href="#" class="btn btn-primary">Visitar</a>
+                    <h5 class="card-title">{{ $doacao->titulo }}</h5>
+                    <p class="card-text">{{ $doacao->descricao }}</p>
+                    <a href="{{ route('admin.detalhe', $doacao->id) }}" class="btn btn-primary">Visitar</a>
                 </div>
                 </div>
             </div>
-        </div>
         @endforeach
         @endif
-
+        </div>
     </div>
 
 @endsection

@@ -53,9 +53,4 @@ class HospitalController extends Controller
         Hospital::find($id)->delete();
         return redirect()->route('admin.hospital');
     }
-
-    public function termos()
-    {
-        return view('admin.termos');
-    }
 }

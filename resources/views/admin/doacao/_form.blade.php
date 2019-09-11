@@ -1,4 +1,5 @@
-<div class="form-group row">
+
+    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Titulo</label>
         <div class="col-sm-10">
             <input type="text" name="titulo" class="form-control" placeholder="Titulo da doação" required autofocus value="{{ isset($registro->titulo) ? $registro->titulo : '' }}">
@@ -8,7 +9,7 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Descrição</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="descricao" placeholder="Descrição da doação" required value="{{ isset($registro->descricao) ? $registro->descricao : '' }}">
+            <textarea type="textarea" class="form-control" name="descricao" placeholder="Descrição da doação" required>{{ isset($registro->descricao) ? $registro->descricao : '' }}</textarea>
         </div>
     </div>
 
@@ -22,7 +23,16 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Hospital</label>
         <div class="col-sm-10">
-            <input type="text" name="hospital" class="form-control" placeholder="Hospital que será feita a doação" required value="{{ isset($registro->hospital) ? $registro->hospital : '' }}">
+        <select class="form-control" name="hospital" required id="">
+            @if (isset($registros) && !empty($registros))
+            <option value=""> :: Selecione ::</option>
+                @foreach ($registros as $reg)
+            <option value="{{ isset($reg->hospital) ? $reg->hospital : '' }}">{{ isset($hosp->nome) ? $hosp->nome : '' }}</option>
+                @endforeach
+                @else
+                <option value="{{ isset($registro->hospital) ? $registro->hospital : '' }}">{{ isset($registroHospital->nome) ? $registroHospital->nome : '' }}</option>
+            @endif
+        </select>
         </div>
     </div>
 
@@ -31,8 +41,8 @@
             Solicitação está ativa?
         </label>
         <div class="col-sm-10">
-            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1" required>
+            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1" value="{{ isset($registro->ativo) ? $registro->ativo : '' }}">
         </div>
     </div>
 
-    <input class="form-check-input" name="usuario" type="hidden">
+    <input class="form-check-input" name="usuario" type="hidden" value="{{ auth()->user()->id }}">

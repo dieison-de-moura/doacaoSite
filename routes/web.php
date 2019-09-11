@@ -35,7 +35,9 @@ Route::get('/admin/doacao/deletar/{id}', ['as' => 'admin.doacao.deletar', 'uses'
 
 
 
-Route::get('/admin/termos', ['as' => 'admin.termos.uso', 'uses' => 'Admin\HospitalController@termos']); //lista os hospitais
+Route::get('/admin/termos', ['as' => 'admin.termos.uso', 'uses' => 'HomeController@termos']);
+Route::get('/admin/sobre_empresa', ['as' => 'admin.sobre.empresa', 'uses' => 'HomeController@sobre']);
+Route::get('/detalhe-doacao/{id}', ['as' => 'admin.detalhe', 'uses' => 'HomeController@detalhe']);
 
 Auth::routes();
 
