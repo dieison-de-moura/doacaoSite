@@ -21,6 +21,13 @@
     </div>
 
     <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Telefone</label>
+        <div class="col-sm-10">
+            <input type="text" name="telefone" class="form-control" placeholder="Telefone para contato em caso de duvidas" required value="{{ isset($registro->tipo_sangue) ? $registro->tipo_sangue : '' }}">
+        </div>
+    </div>
+
+    <div class="form-group row">
         <label class="col-sm-2 col-form-label">Hospital</label>
         <div class="col-sm-10">
         <select class="form-control" name="hospital" required id="">
@@ -41,7 +48,7 @@
             Solicitação está ativa?
         </label>
         <div class="col-sm-10">
-            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1">
+            <input class="form-check-input" name="ativo" type="checkbox" id="gridCheck1" {{isset($registro->ativo) && $registro->ativo == 'sim' ? 'checked' : '' }} value="true">
         </div>
     </div>
 

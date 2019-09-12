@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnAtivoTableRequerDoacaos extends Migration
+class AddColumnTelefoneTableUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumnAtivoTableRequerDoacaos extends Migration
      */
     public function up()
     {
-        Schema::table('requer_doacaos', function (Blueprint $table) {
-            $table->string('ativo');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('telefone')->after('termos_de_uso')->nullable();
         });
     }
 
@@ -25,7 +25,7 @@ class AddColumnAtivoTableRequerDoacaos extends Migration
      */
     public function down()
     {
-        Schema::table('requer_doacaos', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }

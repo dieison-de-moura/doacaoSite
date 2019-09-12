@@ -65,7 +65,14 @@
                         <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">CPF</label>
                             <div class="col-md-6">
-                                <input id="password-confirm" type="text" class="form-control" name="cpf" required>
+                                <input type="text" class="form-control" name="cpf" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Telefone</label>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Telefone/celular para contato" class="form-control" name="telefone" required>
                             </div>
                         </div>
 

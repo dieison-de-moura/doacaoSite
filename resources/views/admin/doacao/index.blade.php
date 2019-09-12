@@ -13,7 +13,7 @@
               <tr>
                 <th scope="col">Titulo</th>
                 <th scope="col">Tipo Sangue</th>
-                <th scope="col">Ativa</th>
+                <th scope="col">Status da solicitação</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
@@ -23,7 +23,7 @@
               <tr>
                 <td>{{ $registro->titulo }}</td>
                 <td>{{ $registro->tipo_sangue }}</td>
-                <td>{{ $registro->ativo }}</td>
+                <td>{{ isset($registro->ativo) && $registro->ativo == 'on' ? 'Válida' : 'Encerrada'}}</td>
                 <td class="align-top">
                     <a class="btn btn-outline-primary" href="{{ route('admin.doacao.editar', $registro->id) }}" role="button">Editar</a>
                     <input class="btn btn-outline-danger" type="button" onclick="confirmarDelete()" value="Deletar" />

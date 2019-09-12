@@ -11,7 +11,7 @@
                         </ul>
                     </div>
                     <div class="col-md-2"></div>
-                    <div class="col-md-4" style="margin-top: 45px;">© 2019 Moura Todos os direitos reservados.</div>
+                    <div class="col-md-4 font-branca">© 2019 Moura Todos os direitos reservados.</div>
                     <div class="col-md-2"></div>
                     <div class="col-md-2 align-middle"><img src="{{ URL::asset('img/logofooter.jpg') }}" width="100" height="100" alt="" class="img-thumbnail" style="margin-top: 8px;"></div>
                 </div>
@@ -30,6 +30,11 @@
 
     .marg-top{
         margin-top: 30px;
+    }
+
+    .font-branca{
+        color : #ffffff;
+        margin-top: 45px;
     }
     </style>
     <!-- JavaScript (Opcional) -->

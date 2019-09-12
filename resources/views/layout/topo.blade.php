@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+        <link rel="icon" href="{{ URL::asset('img/logodoacaotrp.jpg') }}" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
@@ -25,10 +25,10 @@
                     <a class="nav-link" href="{{ route('site.home') }}">Página Inicial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.hospital') }}">Cadastrar Hospital</a>
+                    <a class="nav-link" href="{{ route('admin.hospital') }}">Hospitais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.doacao') }}">Cadastrar doação</a>
+                    <a class="nav-link" href="{{ route('admin.doacao') }}">Doações de sangue</a>
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto">
