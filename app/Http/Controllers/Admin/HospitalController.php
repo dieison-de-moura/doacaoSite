@@ -48,9 +48,11 @@ class HospitalController extends Controller
         return redirect()->route('admin.hospital');
     }
 
-    public function deletar($id)
+    public function deletar(Request $req)
     {
-        Hospital::find($id)->delete();
+        \Session::flash('message', 'Registro deletado com sucesso!');
+        $dados = $req->all();
+        Hospital::find($dados['idHospital'])->delete();
         return redirect()->route('admin.hospital');
     }
 }

@@ -26,7 +26,7 @@
                 <td>{{ isset($registro->ativo) && $registro->ativo == 'on' ? 'Válida' : 'Encerrada'}}</td>
                 <td class="align-top">
                     <a class="btn btn-outline-primary" href="{{ route('admin.doacao.editar', $registro->id) }}" role="button">Editar</a>
-                    <input class="btn btn-outline-danger" type="button" onclick="confirmarDelete()" value="Deletar" />
+                    <button data-id="{{ $registro->id }}" class="btn btn-outline-danger excluir" type="button" onclick="confirmarDelete()" id="idHospital">Deletar</button>
                 </td>
               </tr>
             </tbody>
@@ -38,4 +38,23 @@
             <a class="btn btn-outline-success" href="{{ route('admin.doacao.adicionar') }}" role="button">Adicionar</a>
           </div>
     </div>
+    <form action="{{ route('admin.doacao.deletar') }}" method="post" id="delete-hospital">
+      {{ csrf_field() }}
+    <input type="hidden" name="idHospital" id="hospital-excluir" value="">
+    </form>
+    <script>
+      function confirmarDelete()
+      {
+          var x;
+          var r=confirm("Tem certeza que deseja deletar esse registro?");
+          if (r==true) {
+
+            var id = $('#idHospital').data('id');
+            // alert(id);
+            $('#hospital-excluir').val(id);
+            $('#delete-hospital').submit();
+      }
+    }
+
+  </script>
 @endsection

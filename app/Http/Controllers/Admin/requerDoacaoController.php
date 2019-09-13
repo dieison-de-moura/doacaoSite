@@ -57,10 +57,11 @@ class requerDoacaoController extends Controller
         return redirect()->route('admin.doacao');
     }
 
-    public function deletar($id)
+    public function deletar(Request $req)
     {
         \Session::flash('message', 'Registro deletado com sucesso!');
-        requerDoacao::find($id)->delete();
+        $dados = $req->all();
+        requerDoacao::find($dados['idHospital'])->delete();
         return redirect()->route('admin.doacao');
     }
 }

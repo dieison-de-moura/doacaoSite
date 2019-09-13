@@ -35,7 +35,7 @@
         @if (isset($registrosDoacao) && !empty($registrosDoacao))
         @foreach($registrosDoacao as $doacao)
             <div class="col-md-6">
-                <div class="card">
+                <div class="card card-home">
                     <div class="card-header text-white bg-dark">Tipo do sangue: {{ $doacao->tipo_sangue }}
                     </div>
                 <div class="card-body">

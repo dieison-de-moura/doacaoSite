@@ -36,6 +36,15 @@
         color : #ffffff;
         margin-top: 45px;
     }
+
+    .card-home {
+        margin-bottom: 25px;
+    }
+    .card-home .card-text {
+        height: 50px;
+        line-height: 25px;
+        overflow: hidden;
+    }
     </style>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
